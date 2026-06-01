@@ -4,12 +4,16 @@ import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { LatestHeadlines } from "@/components/LatestHeadlines";
 import { MatchHighlights } from "@/components/MatchHighlights";
 import { SquadSection } from "@/components/SquadSection";
+import { TeamKits } from "@/components/TeamKits";
+import { BossOfClub } from "@/components/BossOfClub";
 import { AboutSimpleFC } from "@/components/AboutSimpleFC";
+import { PartnerLogos } from "@/components/PartnerLogos";
+import { Testimonial } from "@/components/Testimonial";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-on-surface font-body selection:bg-tertiary selection:text-black">
+    <div className="min-h-screen selection:bg-surface selection:text-text-primary font-sans animated-gradient-bg">
       <Navbar />
       <HeroSection />
       <main>
@@ -24,11 +28,23 @@ export default function Home() {
         
         {/* Meet the squad section */}
         <SquadSection />
+
+        {/* Partner Logos section */}
+        <Testimonial />
+
+        {/* Official Club Kits section */}
+        <TeamKits />
+
+        {/* Boss of Club section */}
+        <BossOfClub />
         
         {/* About Simple FC section */}
         <AboutSimpleFC />
+
+        {/* Partner Logos section */}
+        <PartnerLogos />
       </main>
       <Footer />
-    </main>
+    </div>
   );
 }

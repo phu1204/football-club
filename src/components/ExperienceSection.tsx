@@ -2,7 +2,7 @@ import React from "react";
 
 export function ExperienceSection() {
   return (
-    <section className="pb-32 px-5 md:px-16 max-w-[1440px] mx-auto">
+    <section className="pb-32 px-5 md:px-16 max-w-6xl mx-auto">
       <div className="relative rounded-xl overflow-hidden aspect-[21/9] md:aspect-[3/1] flex items-center shadow-[0px_20px_50px_rgba(0,0,0,0.5)]">
         <img
           alt="Panoramic view of cheering fans in a vibrant, neon-lit stadium"

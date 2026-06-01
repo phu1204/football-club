@@ -1,39 +1,69 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function AboutSimpleFC() {
+  const { t } = useLanguage();
+
   return (
-    <section className="py-20 bg-surface-container text-on-surface">
-      <div className="px-5 md:px-16 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-sm font-bold text-tertiary uppercase tracking-widest mb-2">Since 2026</h2>
-          <h3 className="text-3xl md:text-5xl font-display font-bold mb-6">About Simple FC</h3>
-          <div className="space-y-4 text-base md:text-lg text-on-surface-variant font-light leading-relaxed">
-            <p>
-              Welcome to Simple FC, the digital home of modern football. Founded with a vision to redefine the fan experience, Simple FC brings live matches, in-depth analysis, and exclusive behind-the-scenes content directly to supporters worldwide.
+    <section className="section-padding bg-surface relative overflow-hidden">
+      {/* Soft decorative background */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(23,23,23,0.02) 0%, transparent 70%)' }}></div>
+      
+      <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-6 h-[1px] bg-text-muted"></div>
+            <h2 className="text-[10px] text-text-secondary uppercase tracking-widest font-semibold">{t("about.badge")}</h2>
+          </div>
+          
+          <h3 className="heading-xl text-text-primary mb-8 leading-tight">
+            {t("about.title1")}<br/><span className="text-text-secondary font-light italic">{t("about.title2")}</span>
+          </h3>
+          
+          <div className="space-y-6 text-text-secondary border-l-2 border-border-default pl-6 mb-10">
+            <p className="text-lg leading-relaxed">
+              {t("about.p1")}
             </p>
-            <p>
-              At Simple FC, we celebrate the passion and community of football. Our state-of-the-art platform is built to connect global fans with their favorite players, fostering a legacy of excellence on and off the pitch.
+            <p className="leading-relaxed">
+              {t("about.p2")}
             </p>
           </div>
-          <button className="bg-tertiary text-black font-bold text-sm tracking-wider uppercase px-6 py-3 rounded-full hover:bg-tertiary-fixed transition-colors mt-8 cursor-pointer">
-            Read Our Story
+          
+<button className="btn-outline text-xs tracking-widest uppercase font-medium cursor-pointer">
+            <span className="relative z-10">{t("about.cta")}</span>
           </button>
-        </div>
-
-        {/* Right Image Overlay */}
-        <div className="relative rounded-xl overflow-hidden aspect-[4/3] shadow-[0px_20px_50px_rgba(0,0,0,0.6)]">
-          <img
-            alt="High impact action stadium shot"
-            className="w-full h-full object-cover opacity-80"
+        </motion.div>
+        
+        <motion.div 
+          className="relative aspect-[4/5] md:aspect-[3/4] rounded-[var(--radius-card)] overflow-hidden shadow-xl"
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <img 
+            alt="Stadium" 
+            className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkeVTlkqsf_oNYGCA8lr5SnAb3c8Xq8oZ44jbNZEVnIVC6hN38wupx2EhjyGDWXMkmSlMVUbP7HeA4KguSjP5H0JI-aA1KF5XwTPmaIudZwNlcL1uX3rV-VaLA-km7XWqe8BpY65Vr50EXVRtQpkhkpYbUkVSlTS4vXoB1sjG__Pr6a-XKTb4qjZuCBiq0OMXVJ8tesjiNVirVZT3aJclpUGiEUHLZL_AU07HYTqpK3TqWlkWPZM1_fw6us8GBY5-9nfFw3cLHlUI"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-          <div className="absolute bottom-6 left-6 right-6 z-10">
-            <h4 className="font-display text-2xl font-bold text-on-surface mb-1 uppercase">Grand Arena Stadium</h4>
-            <p className="text-sm text-tertiary font-bold tracking-wider">The Heart of Simple FC</p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80"></div>
+          
+          <div className="absolute bottom-8 left-8 right-8 p-5 backdrop-blur-md bg-white/10 border border-white/20 rounded-[var(--radius-card)]">
+            <h4 className="text-xl font-semibold text-white mb-2">{t("about.arena")}</h4>
+            <div className="flex items-center gap-2 text-white/70 text-sm font-light">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              <span>{t("about.capacity")}</span>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
