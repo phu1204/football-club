@@ -95,6 +95,10 @@ const dictionary: TranslationDictionary = {
   "squad.label.height": { vi: "Chiều cao", en: "Height" },
   "squad.label.weight": { vi: "Cân nặng", en: "Weight" },
 
+  //Testimonial
+  "test.title": {vi: "Đối thủ nói gì", en: "Rivals Say"},
+  "test.headline": { vi: "Đối Thủ Lên Tiếng", en: "Hear the Rivals"},
+
   // Team Kits
   "kits.badge": { vi: "Mẫu Áo Thi Đấu", en: "Official Kits" },
   "kits.title": { vi: "Mẫu Áo Thi Đấu Chính Thức", en: "Official Club Kits" },
@@ -139,8 +143,8 @@ const dictionary: TranslationDictionary = {
     en: "Our state-of-the-art facilities and world-class training programs ensure that our players are always at the peak of their performance. Join us on this incredible journey."
   },
   "about.cta": { vi: "KHÁM PHÁ LỊCH SỬ CỦA CHÚNG TÔI", en: "DISCOVER OUR HISTORY" },
-  "about.arena": { vi: "Đấu Trường Grand Arena", en: "The Grand Arena" },
-  "about.capacity": { vi: "Sức chứa: 65.000", en: "Capacity: 65,000" },
+  "about.arena": { vi: "Ao cá Arena", en: "The Ao Cá Arena" },
+  "about.capacity": { vi: "Sức chứa: 100", en: "Capacity: 100" },
 
   // Footer
   "footer.desc": {
@@ -180,6 +184,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const savedLang = localStorage.getItem("simplefc_lang") as Language;
     if (savedLang === "vi" || savedLang === "en") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLanguageState(savedLang);
     } else {
       setLanguageState("en");

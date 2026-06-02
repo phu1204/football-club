@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils"
 import { Marquee } from "@/components/ui/marquee"
 import { useLanguage } from "@/context/LanguageContext";
+import { motion } from "framer-motion";
 
 export function Testimonial() {
   const { t } = useLanguage();
@@ -82,29 +83,57 @@ const ReviewCard = ({
   )
 }
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
+  };
+
+
+    
   return (
-    <section className="section-padding bg-surface container-custom relative">
+    <section className="section-padding bg-surface border-t border-border-default relative">
+      <motion.div className="container-custom"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+      > 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-          <div>
-            <h2 className="text-[10px] text-text-secondary uppercase tracking-widest font-semibold mb-2">{t("tes.title")}</h2>
-            <h3 className="heading-xl text-text-primary">{t("tes.headline")}</h3>
-          </div>
+            <motion.div  
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+            >
+                <h2 className="text-[10px] text-text-secondary uppercase tracking-widest font-semibold mb-2">{t("test.title")}</h2>
+                <h3 className="heading-xl text-text-primary">{t("test.headline")}</h3>
+            </motion.div>
         </div>
-       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-    </div>
+        <motion.div className="relative flex w-full flex-col items-center justify-center overflow-hidden" variants={itemVariants} transition={{ duration: 0.6 }}>
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+            {secondRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+          </Marquee>
+          <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+          <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -95,7 +95,7 @@ export function UpcomingMatches() {
   };
 
   return (
-    <section className="section-padding bg-surface container-custom relative">
+    <section className="section-padding bg-surface container-custom relative" id="matches">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
         <div>
           <h2 className="text-[10px] text-text-secondary uppercase tracking-widest font-semibold mb-2">{t("match.center")}</h2>

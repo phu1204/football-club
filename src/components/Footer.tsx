@@ -19,10 +19,7 @@ export function Footer() {
             <p className="text-text-secondary text-sm leading-relaxed font-light">
               {t("footer.desc")}
             </p>
-            <div className="flex gap-3">
-              <a className="px-4 py-2 bg-surface rounded-[var(--radius-input)] flex items-center justify-center border border-border-default text-text-primary text-xs font-medium shadow-sm hover:shadow-md transition-shadow" href="#">App Store</a>
-              <a className="px-4 py-2 bg-surface rounded-[var(--radius-input)] flex items-center justify-center border border-border-default text-text-primary text-xs font-medium shadow-sm hover:shadow-md transition-shadow" href="#">Play Store</a>
-            </div>
+           
           </div>
           {/* Col 2: Quick Links */}
           <div className="md:pl-8">
@@ -49,7 +46,6 @@ export function Footer() {
           <div>
             <h4 className="text-text-primary font-semibold mb-6 text-sm">{t("footer.col4.title")}</h4>
             <div className="flex gap-5 text-text-secondary text-sm">
-              <a className="hover:text-text-primary transition-colors" href="#">X</a>
               <a className="hover:text-text-primary transition-colors" href="#">Instagram</a>
               <a className="hover:text-text-primary transition-colors" href="#">Facebook</a>
               <a className="hover:text-text-primary transition-colors" href="#">YouTube</a>

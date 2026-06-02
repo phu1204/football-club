@@ -7,16 +7,17 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const navLinks = [
   { key: "nav.home", href: "#" },
-  { key: "nav.matches", href: "#" },
-  { key: "nav.news", href: "#" },
-  { key: "nav.squad", href: "#" },
-  { key: "nav.membership", href: "#" },
-  { key: "nav.kits", href: "#kits" },
+  { key: "nav.matches", href: "#matches" },
+  // { key: "nav.news", href: "#" },
+  { key: "nav.squad", href: "#squad" },
+  // { key: "nav.membership", href: "#membership" },
+  // { key: "nav.kits", href: "#kits" },
 ];
 
 export function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [active, setActive] = useState(0)
 
   return (
     <>
@@ -31,10 +32,10 @@ export function Navbar() {
               alt="Simple Football Club"
               width={40}
               height={40}
-              className="h-10 w-10 object-contain drop-shadow-sm hover:scale-105 transition-transform shrink-0"
+              className="h-10 w-10 object-contain drop-shadow-sm hover:scale-105 transition-transform shrink-0 cursor-pointer"
               loading="eager"
             />
-            <div className="flex flex-col leading-none">
+            <div className="flex flex-col leading-none cursor-pointer">
               <span
                 className="text-[1.05rem] font-black tracking-[0.12em] text-text-primary uppercase leading-none"
                 style={{ fontFamily: "var(--font-display)" }}
@@ -54,10 +55,11 @@ export function Navbar() {
                 key={link.key}
                 href={link.href}
                 className={`relative transition-colors duration-200 after:content-[''] after:absolute after:-bottom-[6px] after:left-0 after:h-[2px] after:bg-accent after:rounded-full after:transition-all after:duration-300 ${
-                  i === 0
+                  i === active
                     ? "text-text-primary font-semibold after:w-full"
                     : "hover:text-text-primary after:w-0 hover:after:w-full"
                 }`}
+                onClick={() => setActive(i)}
               >
                 {t(link.key)}
               </a>
@@ -72,7 +74,7 @@ export function Navbar() {
             </button>
 
             {/* Login — hidden on mobile */}
-            <button className="hidden sm:inline-flex btn-primary shrink-0 text-[0.8rem] px-5 py-2">
+            <button className="hidden sm:flex btn-primary shrink-0 text-[0.8rem] px-5 py-2">
               {t("nav.login")}
             </button>
 

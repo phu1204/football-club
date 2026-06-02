@@ -394,7 +394,7 @@
     font-size: 0.9rem;
     transition: all 250ms ease;
     padding: 12px 24px;
-    display: inline-flex;
+    /* display: inline-flex; */
     align-items: center;
     justify-content: center;
     cursor: pointer;

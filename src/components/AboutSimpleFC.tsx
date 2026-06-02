@@ -8,7 +8,7 @@ export function AboutSimpleFC() {
   const { t } = useLanguage();
 
   return (
-    <section className="section-padding bg-surface relative overflow-hidden">
+    <section className="section-padding bg-surface relative overflow-hidden border-t border-border-default">
       {/* Soft decorative background */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(23,23,23,0.02) 0%, transparent 70%)' }}></div>
       
@@ -37,13 +37,13 @@ export function AboutSimpleFC() {
             </p>
           </div>
           
-<button className="btn-outline text-xs tracking-widest uppercase font-medium cursor-pointer">
+          <button className="btn-outline text-xs tracking-widest uppercase font-medium cursor-pointer">
             <span className="relative z-10">{t("about.cta")}</span>
           </button>
         </motion.div>
         
         <motion.div 
-          className="relative aspect-[4/5] md:aspect-[3/4] rounded-[var(--radius-card)] overflow-hidden shadow-xl"
+          className="relative aspect-[3/4] md:aspect-[4/4] rounded-[var(--radius-card)] overflow-hidden shadow-xl"
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -52,7 +52,7 @@ export function AboutSimpleFC() {
           <img 
             alt="Stadium" 
             className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkeVTlkqsf_oNYGCA8lr5SnAb3c8Xq8oZ44jbNZEVnIVC6hN38wupx2EhjyGDWXMkmSlMVUbP7HeA4KguSjP5H0JI-aA1KF5XwTPmaIudZwNlcL1uX3rV-VaLA-km7XWqe8BpY65Vr50EXVRtQpkhkpYbUkVSlTS4vXoB1sjG__Pr6a-XKTb4qjZuCBiq0OMXVJ8tesjiNVirVZT3aJclpUGiEUHLZL_AU07HYTqpK3TqWlkWPZM1_fw6us8GBY5-9nfFw3cLHlUI"
+            src="/images/arena.png"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80"></div>
           

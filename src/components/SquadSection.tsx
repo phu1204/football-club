@@ -6,40 +6,40 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const players = [
   {
-    name: "Majed Nasser",
+    name: "Châu Hưng",
     role: "Goalkeeper",
     number: "01",
     quote: "Nothing gets past.",
-    age: 30,
-    nationality: "UAE",
+    age: 26,
+    nationality: "VN",
     height: "1.88m",
     weight: "82kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAsYDRk2t4DR5D2b-P6C83ZR9c9YQkqEYDjGVvS4rNxTzrjXr9xySYrAUWOPvywzlrBJvb3Oq5emQ-9Ecq7Nia9MvR3yL5Cg0KZY0KWzJgvybJc-QYbEWcMqkXyBAdtALnXAJ9mJG5zTiSKBeVPz0I4flyyXHM-oFei7LhdLa8IOvDvqxOinuYyOaLVtB4wBhqS_6L3y57uB5hDAOQdaDbtHmkpjgeEGYoQJ1QO7QtkpMw3Pc8S1SpwvNHQU2Lo_ts8DqIVHRuap88"
+    image: "/images/hung.jpg"
   },
   {
-    name: "Tariq Hassan",
+    name: "Tấn Phát",
     role: "Defender",
     number: "02",
     quote: "Always on guard.",
     age: 26,
-    nationality: "UAE",
+    nationality: "VN",
     height: "1.85m",
     weight: "79kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBxZuaid3nR9OdwecOgT8UyZxThSJFx6x5-3NMvqOAdKR0RV3-E_LXjWEl8cZiBpAV8bEE0Sh_Wx7trNm3-fhOUemf5d7A0tY7q4j6yJ-ePycQL5PHKwHF_4Nyt92_l0Cpjt3ZXKstqt9Y9voF-NxoOtHztIQMxdUqfHuRDyssGpHsys7rQd82Sah0td51qlVbefLyopdOtv9GVMbaSdLT9KAzBRwg8fb0TF4NyfqRi7tEQiswePdK7QXK9-RGSI1qMV8mtjvJ7fKo"
+    image: "/images/phat.jpg"
   },
   {
-    name: "Ali Al-Bulaihi",
+    name: "Chí Tuấn",
     role: "Defender",
     number: "03",
     quote: "The final line of defense.",
     age: 33,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.82m",
     weight: "80kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWPUz3X74CefADDZeglhaw-kWoF1DEUsTHS80pBNlgGSyKF0TLBNSTu8LuUFp9_qDCOwlJtt5nElyR34vH3zWb6Cmf94VA4RxPqKdduc1q39H1TQIRXLPp0dAn2HdtOQM33dcYxeKIvBqTtOgywt5v7YFPYnlII2x3nStLNBGamgl2EXFjrU9dFblahaLRvovh-QRV5_co0PsNnzco0g4g3ImNws-f-oxnF0TcliQYW-vXQTUybmredtfvQiLB00utiPDo9sllO20"
+    image: "/images/tuan.jpg"
   },
   {
-    name: "Yasser Ahmed",
+    name: "Kiệt AB",
     role: "Defender",
     number: "04",
     quote: "The wall of Simple FC.",
@@ -47,84 +47,128 @@ const players = [
     nationality: "Egypt",
     height: "1.90m",
     weight: "85kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBxZuaid3nR9OdwecOgT8UyZxThSJFx6x5-3NMvqOAdKR0RV3-E_LXjWEl8cZiBpAV8bEE0Sh_Wx7trNm3-fhOUemf5d7A0tY7q4j6yJ-ePycQL5PHKwHF_4Nyt92_l0Cpjt3ZXKstqt9Y9voF-NxoOtHztIQMxdUqfHuRDyssGpHsys7rQd82Sah0td51qlVbefLyopdOtv9GVMbaSdLT9KAzBRwg8fb0TF4NyfqRi7tEQiswePdK7QXK9-RGSI1qMV8mtjvJ7fKo"
+    image: "/images/kiet.jpg"
   },
   {
-    name: "Hassan Al-Tambakti",
+    name: "Thanh Hòa",
     role: "Defender",
     number: "05",
     quote: "Unbreakable spirit.",
     age: 25,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.83m",
     weight: "76kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCt2-SGlGNwByUNdfAO8zf6r7pRkPSdWGceSZ2eop_IRoNTf2ZZLFElAwD0w8HlkeNjFpi43B0BFepCyUVOQUjpd-5PwToWT3uid5pvnJVT3YCPXCtNtvpN0to3SLXuvURH0DElR-XoRotBBlaM516vtKda4adi8yYl9YiIZj1tetx17UUOL27NzuG_bjZkWN5p7aAqpXgnavBJ5ACNkqRe_9ZDqxSKBN9tdymAH5T20A-n3-XHFrt-ao4dLQQbAjcm9UZUri_EYno"
+    image: "/images/a2.jpg"
   },
   {
-    name: "Salman Al-Faraj",
-    role: "Midfielder",
+    name: "Ngọc Long",
+    role: "Defender",
     number: "06",
     quote: "Vision meets execution.",
     age: 34,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.79m",
     weight: "70kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWPUz3X74CefADDZeglhaw-kWoF1DEUsTHS80pBNlgGSyKF0TLBNSTu8LuUFp9_qDCOwlJtt5nElyR34vH3zWb6Cmf94VA4RxPqKdduc1q39H1TQIRXLPp0dAn2HdtOQM33dcYxeKIvBqTtOgywt5v7YFPYnlII2x3nStLNBGamgl2EXFjrU9dFblahaLRvovh-QRV5_co0PsNnzco0g4g3ImNws-f-oxnF0TcliQYW-vXQTUybmredtfvQiLB00utiPDo9sllO20"
+    image: "/images/long.jpg"
   },
   {
-    name: "Omar Khalid",
-    role: "Midfielder",
+    name: "Bảo Khoa",
+    role: "Defender",
     number: "08",
     quote: "Controlling the tempo.",
     age: 22,
     nationality: "Qatar",
     height: "1.75m",
     weight: "68kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWPUz3X74CefADDZeglhaw-kWoF1DEUsTHS80pBNlgGSyKF0TLBNSTu8LuUFp9_qDCOwlJtt5nElyR34vH3zWb6Cmf94VA4RxPqKdduc1q39H1TQIRXLPp0dAn2HdtOQM33dcYxeKIvBqTtOgywt5v7YFPYnlII2x3nStLNBGamgl2EXFjrU9dFblahaLRvovh-QRV5_co0PsNnzco0g4g3ImNws-f-oxnF0TcliQYW-vXQTUybmredtfvQiLB00utiPDo9sllO20"
+    image: "/images/khoa.jpg"
   },
   {
-    name: "Salem Al-Dawsari",
-    role: "Midfielder",
+    name: "Chí Dương",
+    role: "Defender",
     number: "14",
-    quote: "The engine of the team.",
+    quote: "The wall of Simple FC.",
     age: 32,
     nationality: "Saudi Arabia",
     height: "1.71m",
     weight: "71kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBxZuaid3nR9OdwecOgT8UyZxThSJFx6x5-3NMvqOAdKR0RV3-E_LXjWEl8cZiBpAV8bEE0Sh_Wx7trNm3-fhOUemf5d7A0tY7q4j6yJ-ePycQL5PHKwHF_4Nyt92_l0Cpjt3ZXKstqt9Y9voF-NxoOtHztIQMxdUqfHuRDyssGpHsys7rQd82Sah0td51qlVbefLyopdOtv9GVMbaSdLT9KAzBRwg8fb0TF4NyfqRi7tEQiswePdK7QXK9-RGSI1qMV8mtjvJ7fKo"
+    image: "/images/cduong.jpg"
+  },
+ {
+    name: "Nhật Hào",
+    role: "Defender",
+    number: "14",
+    quote: "The wall of Simple FC.",
+    age: 32,
+    nationality: "VN",
+    height: "1.71m",
+    weight: "71kg",
+    image: "/images/hao.jpg"
+  },
+ {
+    name: "Phu Nguyen",
+    role: "Midfielder",
+    number: "22",
+    quote: "The engine of the team.",
+    age: 32,
+    nationality: "VN",
+    height: "1.71m",
+    weight: "71kg",
+    image: "/images/p7n.jpg"
   },
   {
-    name: "Firas Al-Buraikan",
+    name: "Hoàng Giang",
+    role: "Midfielder",
+    number: "22",
+    quote: "The engine of the team.",
+    age: 32,
+    nationality: "VN",
+    height: "1.71m",
+    weight: "71kg",
+    image: "/images/giang.jpg"
+  },
+  {
+    name: "Văn Duy",
+    role: "Midfielder",
+    number: "22",
+    quote: "The engine of the team.",
+    age: 32,
+    nationality: "VN",
+    height: "1.71m",
+    weight: "71kg",
+    image: "/images/duy.jpg"
+  },
+  {
+    name: "Tường Mập",
     role: "Forward",
     number: "09",
     quote: "Born to score.",
     age: 23,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.82m",
     weight: "75kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCt2-SGlGNwByUNdfAO8zf6r7pRkPSdWGceSZ2eop_IRoNTf2ZZLFElAwD0w8HlkeNjFpi43B0BFepCyUVOQUjpd-5PwToWT3uid5pvnJVT3YCPXCtNtvpN0to3SLXuvURH0DElR-XoRotBBlaM516vtKda4adi8yYl9YiIZj1tetx17UUOL27NzuG_bjZkWN5p7aAqpXgnavBJ5ACNkqRe_9ZDqxSKBN9tdymAH5T20A-n3-XHFrt-ao4dLQQbAjcm9UZUri_EYno"
+    image: "/images/tuong.jpg"
   },
   {
-    name: "Sami Al-Dawsari",
+    name: "Thế Anh",
     role: "Forward",
     number: "10",
     quote: "Precision in every strike.",
     age: 27,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.78m",
     weight: "74kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCt2-SGlGNwByUNdfAO8zf6r7pRkPSdWGceSZ2eop_IRoNTf2ZZLFElAwD0w8HlkeNjFpi43B0BFepCyUVOQUjpd-5PwToWT3uid5pvnJVT3YCPXCtNtvpN0to3SLXuvURH0DElR-XoRotBBlaM516vtKda4adi8yYl9YiIZj1tetx17UUOL27NzuG_bjZkWN5p7aAqpXgnavBJ5ACNkqRe_9ZDqxSKBN9tdymAH5T20A-n3-XHFrt-ao4dLQQbAjcm9UZUri_EYno"
+    image: "/images/anh.jpg"
   },
   {
-    name: "Saleh Al-Shehri",
+    name: "Trần Ry",
     role: "Forward",
     number: "11",
     quote: "Pace and power.",
     age: 30,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.84m",
     weight: "77kg",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWPUz3X74CefADDZeglhaw-kWoF1DEUsTHS80pBNlgGSyKF0TLBNSTu8LuUFp9_qDCOwlJtt5nElyR34vH3zWb6Cmf94VA4RxPqKdduc1q39H1TQIRXLPp0dAn2HdtOQM33dcYxeKIvBqTtOgywt5v7YFPYnlII2x3nStLNBGamgl2EXFjrU9dFblahaLRvovh-QRV5_co0PsNnzco0g4g3ImNws-f-oxnF0TcliQYW-vXQTUybmredtfvQiLB00utiPDo9sllO20"
+    image: "/images/ry.jpg"
   }
 ];
 
@@ -156,7 +200,7 @@ export function SquadSection() {
   };
 
   return (
-    <section className="section-padding bg-surface relative overflow-hidden">
+    <section className="section-padding bg-surface relative overflow-hidden border-t border-border-default" id="squad">
       {/* Soft decorative ambient */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(23,23,23,0.02) 0%, transparent 70%)' }}></div>
 
@@ -172,9 +216,6 @@ export function SquadSection() {
             <h2 className="text-[10px] text-text-secondary uppercase tracking-widest font-semibold mb-2">{t("squad.title")}</h2>
             <h3 className="heading-xl text-text-primary">{t("squad.headline")}</h3>
           </div>
-          <button className="text-text-secondary text-sm font-medium border-b border-border-active cursor-pointer hover:text-accent hover:border-accent transition-colors duration-300 pb-1">
-            {t("squad.viewAll")}
-          </button>
         </motion.div>
         
         <motion.div 
@@ -189,18 +230,18 @@ export function SquadSection() {
               key={index} 
               variants={itemVariants}
               onClick={() => setSelectedPlayer(player)}
-              className="card-style !p-0 cursor-pointer overflow-hidden group hover:border-border-active transition-all duration-500"
+              className="card-style !p-0 cursor-pointer overflow-hidden group transition-all duration-500"
             >
               <div className="aspect-[3/4] overflow-hidden bg-background relative">
                 <img 
                   alt={player.name} 
-                  className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" 
                   src={player.image}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60"></div>
                 
                 {/* Player Number Watermark */}
-                <span className="absolute -bottom-4 right-2 text-7xl font-black italic text-white/10 pointer-events-none group-hover:text-white/20 transition-colors duration-500">
+                <span className="absolute -bottom-4 right-2 text-7xl font-black italic text-white/25 pointer-events-none group-hover:text-white/60 transition-colors duration-500">
                   {player.number}
                 </span>
               </div>
@@ -212,7 +253,7 @@ export function SquadSection() {
                   {player.name}
                 </h3>
                 <p className="text-text-muted text-xs mt-2 italic border-l-2 border-border-active pl-3">
-                  "{player.quote}"
+                  &quot;{player.quote}&quot;
                 </p>
               </div>
             </motion.div>
@@ -239,7 +280,7 @@ export function SquadSection() {
             >
               <button 
                 onClick={() => setSelectedPlayer(null)}
-                className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/10 hover:bg-accent text-text-primary hover:text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-md cursor-pointer"
+                className="absolute top-4 right-4 z-10 w-10 h-10 md:bg-black/10 bg-white hover:bg-accent text-text-primary hover:text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-md cursor-pointer"
               >
                 <span className="material-symbols-outlined">close</span>
               </button>
@@ -280,7 +321,10 @@ export function SquadSection() {
                     <span className="material-symbols-outlined text-text-muted text-xl">public</span>
                     <div>
                       <span className="text-text-secondary text-[10px] uppercase tracking-widest block">{t("squad.label.nationality")}</span>
-                      <span className="text-text-primary font-bold">{selectedPlayer.nationality}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-text-primary font-bold">{selectedPlayer.nationality}</span>
+                        <img src="/vietnam.svg" alt="Website Logo" width={22} height={22} />
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">

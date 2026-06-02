@@ -26,11 +26,26 @@ const highlightsData : Hightlight[] = [
   },
 ]
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
+  };
+
 export function MatchHighlights() {
   const { t } = useLanguage();
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-background border-t border-border-default">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div>
@@ -47,17 +62,23 @@ export function MatchHighlights() {
             </a>
           </div>
         </div>
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}>
             {highlightsData.map((highlight) => {
               return (
-                <HeroVideoDialog
-                  key={highlight.id}
-                  className="block dark:hidden relative group overflow-hidden rounded-card shadow-sm"
-                  animationStyle="top-in-bottom-out"
-                  videoSrc={convertYoutubeUrl(highlight.videoSrc)}
-                  thumbnailSrc={getIdVideo(highlight.videoSrc)}
-                  thumbnailAlt="Hero Video"
-                />
+                <motion.div key={highlight.id}
+                  variants={itemVariants}>
+                  <HeroVideoDialog
+                    className="block dark:hidden relative group overflow-hidden h-full rounded-card shadow-sm transition-all duration-500"
+                    animationStyle="top-in-bottom-out"
+                    videoSrc={convertYoutubeUrl(highlight.videoSrc)}
+                    thumbnailSrc={getIdVideo(highlight.videoSrc)}
+                    thumbnailAlt="Hero Video"
+                  />
+                </motion.div>
               )
             })}
         </motion.div>

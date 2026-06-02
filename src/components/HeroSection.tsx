@@ -7,7 +7,7 @@ export function HeroSection() {
     <section className="relative w-full h-screen overflow-hidden bg-[#050d18]">
       {/* Full-screen video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover object-top"
+        className="absolute inset-0 w-full h-full object-cover"
         src="/videos/hero.mp4"
         autoPlay
         loop

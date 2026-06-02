@@ -10,6 +10,7 @@ import { AboutSimpleFC } from "@/components/AboutSimpleFC";
 import { PartnerLogos } from "@/components/PartnerLogos";
 import { Testimonial } from "@/components/Testimonial";
 import { Footer } from "@/components/Footer";
+import { LineUp } from "@/components/LineUp";
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
         <UpcomingMatches />
         
         {/* Latest headlines section */}
-        <LatestHeadlines />
+        <LineUp />
+        {/* <LatestHeadlines /> */}
         
         {/* Match highlights video section */}
         <MatchHighlights />
@@ -33,7 +35,7 @@ export default function Home() {
         <Testimonial />
 
         {/* Official Club Kits section */}
-        <TeamKits />
+        {/* <TeamKits /> */}
 
         {/* Boss of Club section */}
         <BossOfClub />

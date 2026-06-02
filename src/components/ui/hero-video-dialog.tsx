@@ -78,7 +78,7 @@ export function HeroVideoDialog({
   const selectedAnimation = animationVariants[animationStyle]
 
   return (
-    <div className={cn("relative", className)}>
+    <motion.div className={cn("relative", className)}>
       <button
         type="button"
         aria-label="Play video"
@@ -143,6 +143,6 @@ export function HeroVideoDialog({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }
