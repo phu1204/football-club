@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "The official premium digital platform of Simple Football Club. Experience passion, glory, and the unyielding spirit of the beautiful game.",
 
    icons: {
-    icon: "/images/logo.png",
+    icon: "/images/logo-simple.png",
   },
 
   openGraph: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "One Team. One Dream.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/logo-simple.png",
         width: 1200,
         height: 630,
       },
