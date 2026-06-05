@@ -4,10 +4,11 @@ import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { LatestHeadlines } from "@/components/LatestHeadlines";
 import { MatchHighlights } from "@/components/MatchHighlights";
 import { SquadSection } from "@/components/SquadSection";
+import { PlayerStats } from "@/components/PlayerStats";
 import { TeamKits } from "@/components/TeamKits";
 import { BossOfClub } from "@/components/BossOfClub";
 import { AboutSimpleFC } from "@/components/AboutSimpleFC";
-import { PartnerLogos } from "@/components/PartnerLogos";
+import { Sponsors } from "@/components/Sponsors";
 import { Testimonial } from "@/components/Testimonial";
 import { Footer } from "@/components/Footer";
 import { LineUp } from "@/components/LineUp";
@@ -31,6 +32,9 @@ export default function Home() {
         {/* Meet the squad section */}
         <SquadSection />
 
+        {/* Player stats section */}
+        <PlayerStats />
+
         {/* Partner Logos section */}
         <Testimonial />
 
@@ -43,8 +47,8 @@ export default function Home() {
         {/* About Simple FC section */}
         <AboutSimpleFC />
 
-        {/* Partner Logos section */}
-        <PartnerLogos />
+        {/* Sponsor section */}
+        <Sponsors />
       </main>
       <Footer />
     </div>

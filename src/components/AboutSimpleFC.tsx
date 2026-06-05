@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import Image from "next/image"
 
 export function AboutSimpleFC() {
   const { t } = useLanguage();
@@ -49,12 +50,15 @@ export function AboutSimpleFC() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img 
+          <Image
+            fill
+            priority
             alt="Stadium" 
-            className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" 
-            src="/images/arena.png"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-1000 hover:scale-105" 
+            src="/images/arena.jpeg"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-80"></div>
           
           <div className="absolute bottom-8 left-8 right-8 p-5 backdrop-blur-md bg-white/10 border border-white/20 rounded-[var(--radius-card)]">
             <h4 className="text-xl font-semibold text-white mb-2">{t("about.arena")}</h4>

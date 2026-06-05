@@ -69,9 +69,9 @@ export function Navbar() {
           {/* Right Controls */}
           <div className="flex items-center gap-3 lg:gap-5">
             {/* Search — hidden on mobile to save space */}
-            <button className="hidden sm:flex p-2 hover:bg-surface-elevated hover:shadow-sm rounded-full transition-all items-center justify-center shrink-0 text-text-secondary hover:text-text-primary">
+            {/* <button className="hidden sm:flex p-2 hover:bg-surface-elevated hover:shadow-sm rounded-full transition-all items-center justify-center shrink-0 text-text-secondary hover:text-text-primary">
               <span className="material-symbols-outlined text-[20px]">search</span>
-            </button>
+            </button> */}
 
             {/* Login — hidden on mobile */}
             <button className="hidden sm:flex btn-primary shrink-0 text-[0.8rem] px-5 py-2">
@@ -79,7 +79,7 @@ export function Navbar() {
             </button>
 
             {/* Language Switcher */}
-            <div className="relative bg-surface border border-border-default p-1 rounded-full flex items-center w-[76px] h-9 shrink-0 shadow-inner">
+            <div className="relative bg-surface border border-border-default p-1 rounded-full flex items-center w-19 h-9 shrink-0 shadow-inner">
               <button
                 onClick={() => setLanguage("vi")}
                 className={`flex-1 text-center text-[10px] font-semibold transition-all duration-300 relative z-10 cursor-pointer select-none ${

@@ -4,18 +4,43 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-
 // --- Custom High-Fidelity SVG Logo Components ---
 
 
-const AlBaladLogo = () => (
-  <svg viewBox="0 0 100 100" className="w-6 h-6 drop-shadow-sm inline-block select-none" aria-hidden="true">
-    <circle cx="50" cy="50" r="45" fill="#78350f" stroke="#fbbf24" strokeWidth="4" />
-    <circle cx="50" cy="50" r="35" fill="none" stroke="#f59e0b" strokeWidth="2" strokeDasharray="5,3" />
-    <polygon points="50,20 58,38 78,38 62,50 68,70 50,58 32,70 38,50 22,38 42,38" fill="#fbbf24" />
+const RandomLogo = () => (
+   <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 128 128"
+  >
+    <circle
+      cx="64"
+      cy="64"
+      r="60"
+      fill="#0F172A"
+      stroke="#E5E7EB"
+      strokeWidth="4"
+    />
+
+    <text
+      x="64"
+      y="82"
+      textAnchor="middle"
+      fontSize="64"
+      fontWeight="700"
+      fill="white"
+    >
+      ?
+    </text>
   </svg>
 );
 
+const SimpleLogo = () => (
+  <img src="/images/logo-simple.png" alt="random Logo" width={24} height={24} />
+  
+)
+ 
 // --- Match Data Definition ---
 
 interface Team {
@@ -38,41 +63,41 @@ interface Match {
 const matchesData: Match[] = [
   {
     id: 1,
-    competition: "Women's 1st Div.",
+    competition: "Together",
     dateText: "4 - 3",
     fullDateTimeText: "COMPLETED • MAY 1, 2025",
     isPast: true,
-    team1: { name: "Al Batin", logo: AlBaladLogo },
-    team2: { name: "Al Balad", logo: AlBaladLogo },
-    location: "Al-Batin Club Stadium",
+    team1: { name: "Simple FC", logo: SimpleLogo },
+    team2: { name: "Random FC", logo: RandomLogo },
+    location: "Ao Ca Stadium",
     isHighlight: true,
   },
   {
     id: 2,
-    competition: "King Cup",
+    competition: "Together",
     dateText: "6 May",
     fullDateTimeText: "MAY 6, 2025 • 8:15 PM",
-    team1: { name: "Al Qadsiyah", logo: AlBaladLogo },
-    team2: { name: "Al Ettifaq", logo: AlBaladLogo },
-    location: "Prince Mohamed bin Fahd Stadium",
+    team1: { name: "Simple FC", logo: SimpleLogo },
+    team2: { name: "Random FC", logo: RandomLogo },
+    location: "Ao Ca Stadium",
   },
   {
     id: 3,
-    competition: "King Cup",
+    competition: "Together",
     dateText: "8 May",
     fullDateTimeText: "MAY 8, 2025 • 10:30 PM",
-    team1: { name: "Al Ittihad", logo: AlBaladLogo },
-    team2: { name: "Al Shabab", logo: AlBaladLogo },
-    location: "King Abdullah Sports City",
+    team1: { name: "Simple FC", logo: SimpleLogo },
+    team2: { name: "Random FC", logo: RandomLogo },
+    location: "Ao Ca Stadium",
   },
   {
     id: 4,
-    competition: "Diriyah Saudi Cup",
+    competition: "Together",
     dateText: "11 May",
     fullDateTimeText: "MAY 11, 2025 • 9:45 PM",
-    team1: { name: "Al Nassr", logo: AlBaladLogo },
-    team2: { name: "Al Wehda", logo: AlBaladLogo },
-    location: "Al-Awwal Park Stadium",
+    team1: { name: "Simple FC", logo: SimpleLogo },
+    team2: { name: "Random FC", logo: RandomLogo },
+    location: "Ao Ca Stadium",
   },
 ];
 

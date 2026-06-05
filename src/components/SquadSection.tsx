@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import Image from "next/image"
 
 const players = [
   {
@@ -285,11 +286,14 @@ export function SquadSection() {
                 <span className="material-symbols-outlined">close</span>
               </button>
 
-              <div className="w-full md:w-2/5 aspect-square md:aspect-auto relative bg-surface">
-                <img 
+              <div className="w-full md:w-2/5 aspect-square relative bg-surface">
+                <Image 
                   src={selectedPlayer.image} 
                   alt={selectedPlayer.name} 
-                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  fill
+                  priority
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-background"></div>
                 <span className="absolute bottom-4 left-4 text-8xl md:text-9xl font-black italic text-text-primary/5 pointer-events-none mix-blend-overlay">
@@ -323,7 +327,7 @@ export function SquadSection() {
                       <span className="text-text-secondary text-[10px] uppercase tracking-widest block">{t("squad.label.nationality")}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-text-primary font-bold">{selectedPlayer.nationality}</span>
-                        <img src="/vietnam.svg" alt="Website Logo" width={22} height={22} />
+                        <Image src="/svgs/vietnam.svg" alt="Website Logo" width={22} height={22} />
                       </div>
                     </div>
                   </div>

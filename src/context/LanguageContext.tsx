@@ -75,6 +75,11 @@ const dictionary: TranslationDictionary = {
   "highlights.item2.title": { vi: "Ứng Cử Viên Bàn Thắng Đẹp Nhất Tháng", en: "Goal of the Month Contender" },
   "highlights.item3.title": { vi: "Hậu Trường Buổi Tập: Tuần 12", en: "Inside Training: Week 12" },
 
+  // Lineup Section
+  "line.center": { vi: "Chiến thuật & Đội hình", en: "Tactics & Lineup" },
+  "line.upcoming": { vi: "Đội hình ra sân", en: "Starting Lineup" },
+  "line.substitutes": { vi: "Cầu Thủ Dự Bị", en: "Substitutes" },
+
   // Squad Section
   "squad.title": { vi: "Đội hình thi đấu", en: "First Team" },
   "squad.headline": { vi: "Gặp Gỡ Đội Hình", en: "Meet the Squad" },
@@ -94,6 +99,22 @@ const dictionary: TranslationDictionary = {
   "squad.label.nationality": { vi: "Quốc tịch", en: "Nationality" },
   "squad.label.height": { vi: "Chiều cao", en: "Height" },
   "squad.label.weight": { vi: "Cân nặng", en: "Weight" },
+
+  // Stats Section
+  "stats.title": { vi: "Thống Kê Cá Nhân", en: "Player Statistics" },
+  "stats.headline": { vi: "Bảng Vàng Thành Tích", en: "Season Leaders" },
+  "stats.goals": { vi: "Bàn thắng", en: "Goals" },
+  "stats.goals.title": { vi: "Vua Phá Lưới", en: "Top Scorers" },
+  "stats.assists": { vi: "Kiến tạo", en: "Assists" },
+  "stats.assists.title": { vi: "Vua Kiến Tạo", en: "Top Assists" },
+  "stats.player": { vi: "Cầu thủ", en: "Player" },
+  "stats.matches": { vi: "Trận đấu", en: "Matches" },
+
+  // Partner / Sponsor Section
+  "partner.title": { vi: "Nhà Tài Trợ", en: "Sponsors" },
+  "partner.type.main": { vi: "Nhà Tài Trợ Kim Cương", en: "Diamond Sponsor" },
+  "partner.type.governing": { vi: "Cơ Quan Quản Lý", en: "Governing Body" },
+  "partner.name.dongphat": { vi: "Công ty Đông Phát", en: "Dong Phat Company" },
 
   //Testimonial
   "test.title": {vi: "Đối thủ nói gì", en: "Rivals Say"},

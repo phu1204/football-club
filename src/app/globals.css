@@ -194,6 +194,16 @@
   --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
 @layer base {
   *,
   *::before,
