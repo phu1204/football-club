@@ -164,7 +164,7 @@ const dictionary: TranslationDictionary = {
     en: "Our state-of-the-art facilities and world-class training programs ensure that our players are always at the peak of their performance. Join us on this incredible journey."
   },
   "about.cta": { vi: "KHÁM PHÁ LỊCH SỬ CỦA CHÚNG TÔI", en: "DISCOVER OUR HISTORY" },
-  "about.arena": { vi: "Ao cá Arena", en: "The Ao Cá Arena" },
+  "about.arena": { vi: "Sân vận động Ao Cá", en: "The Ao Ca Arena" },
   "about.capacity": { vi: "Sức chứa: 100", en: "Capacity: 100" },
 
   // Footer

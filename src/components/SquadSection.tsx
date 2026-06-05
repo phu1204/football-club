@@ -240,10 +240,10 @@ export function SquadSection() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   fill
                   priority
-                  className="object-cover object-cover group-hover:scale-110 transition-all duration-700"
+                  className="object-cover group-hover:scale-110 transition-all duration-700"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-60"></div>
                 
                 {/* Player Number Watermark */}
                 <span className="absolute -bottom-4 right-2 text-7xl font-black italic text-white/25 pointer-events-none group-hover:text-white/60 transition-colors duration-500">
@@ -300,7 +300,7 @@ export function SquadSection() {
                   className="object-cover"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-background"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-background"></div>
                 <span className="absolute bottom-4 left-4 text-8xl md:text-9xl font-black italic text-text-primary/5 pointer-events-none mix-blend-overlay">
                   {selectedPlayer.number}
                 </span>
@@ -313,7 +313,7 @@ export function SquadSection() {
                 <h3 className="text-4xl md:text-5xl font-semibold text-text-primary mb-6 tracking-tight">
                   {selectedPlayer.name}
                 </h3>
-                <p className="text-text-secondary text-base italic border-l-2 border-border-active pl-4 mb-8">
+                <p className="text-text-secondary text-base italic border-l-z2 border-border-active pl-4 mb-8">
                   &quot;{selectedPlayer.quote}&quot;
                 </p>
 
