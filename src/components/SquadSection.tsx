@@ -309,7 +309,7 @@ export function SquadSection() {
                   {selectedPlayer.name}
                 </h3>
                 <p className="text-text-secondary text-base italic border-l-2 border-border-active pl-4 mb-8">
-                  "{selectedPlayer.quote}"
+                  &quot;{selectedPlayer.quote}&quot;
                 </p>
 
                 {/* Additional Info Section */}
