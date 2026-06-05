@@ -45,7 +45,7 @@ const players = [
     number: "04",
     quote: "The wall of Simple FC.",
     age: 24,
-    nationality: "Egypt",
+    nationality: "VN",
     height: "1.90m",
     weight: "85kg",
     image: "/images/kiet.jpg"
@@ -78,7 +78,7 @@ const players = [
     number: "08",
     quote: "Controlling the tempo.",
     age: 22,
-    nationality: "Qatar",
+    nationality: "VN",
     height: "1.75m",
     weight: "68kg",
     image: "/images/khoa.jpg"
@@ -89,7 +89,7 @@ const players = [
     number: "14",
     quote: "The wall of Simple FC.",
     age: 32,
-    nationality: "Saudi Arabia",
+    nationality: "VN",
     height: "1.71m",
     weight: "71kg",
     image: "/images/cduong.jpg"
@@ -234,10 +234,14 @@ export function SquadSection() {
               className="card-style !p-0 cursor-pointer overflow-hidden group transition-all duration-500"
             >
               <div className="aspect-[3/4] overflow-hidden bg-background relative">
-                <img 
+                 <Image 
+                  src={player.image} 
                   alt={player.name} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" 
-                  src={player.image}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  fill
+                  priority
+                  className="object-cover object-cover group-hover:scale-110 transition-all duration-700"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60"></div>
                 
@@ -294,6 +298,7 @@ export function SquadSection() {
                   fill
                   priority
                   className="object-cover"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-background"></div>
                 <span className="absolute bottom-4 left-4 text-8xl md:text-9xl font-black italic text-text-primary/5 pointer-events-none mix-blend-overlay">
