@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import SoccerLineUp, { type Team } from 'react-soccer-lineup';
@@ -42,9 +41,23 @@ const substitutes = [
 ];
 
 export function LineUp() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen(); // check lần đầu
+    window.addEventListener("resize", checkScreen);
+
+    return () => {
+      window.removeEventListener("resize", checkScreen);
+    };
+  }, []);
   const { t } = useLanguage();
   return (
-    <section className="py-24 mx-auto px-4 border-t border-border-default">
+    <section className="py-24 mx-auto border-t border-border-default">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,13 +76,14 @@ export function LineUp() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="w-full lg:w-1/2 flex justify-center items-center"
+          className="w-full lg:w-1/2 flex justify-center items-center "
         >
           <SoccerLineUp
-              size="small"
+              size="responsive"
               color="#4a7d32"
               pattern="squares"
               homeTeam={team}
+              orientation={isMobile ? 'vertical' : "horizontal"}
             />
         </motion.div>
         <motion.div 

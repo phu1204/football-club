@@ -10,14 +10,13 @@ const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 export const metadata: Metadata = {
   title: "Simple FC — Where Legends Are Forged",
   description: "The official premium digital platform of Simple Football Club. Experience passion, glory, and the unyielding spirit of the beautiful game.",
-
    icons: {
     icon: "/images/logo-simple.png",
   },
 
   openGraph: {
-    title: "Phoenix FC",
-    description: "One Team. One Dream.",
+    title: "Simple FC",
+    description: "The official premium digital platform of Simple Football Club. Experience passion, glory, and the unyielding spirit of the beautiful game.",
     images: [
       {
         url: "/images/logo-simple.png",

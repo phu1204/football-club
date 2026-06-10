@@ -306,19 +306,19 @@ export function SquadSection() {
                 </span>
               </div>
               
-              <div className="p-8 md:p-12 w-full md:w-3/5 flex flex-col justify-center">
-                <span className="text-xs text-text-secondary font-semibold uppercase tracking-widest mb-2 block">
+              <div className="px-8 py-6 md:p-12 w-full md:w-3/5 flex flex-col justify-center">
+                <span className="text-xs text-text-secondary font-semibold uppercase tracking-widest mb-1 md:mb-2 block">
                   {getRoleTranslation(selectedPlayer.role)}
                 </span>
-                <h3 className="text-4xl md:text-5xl font-semibold text-text-primary mb-6 tracking-tight">
+                <h3 className="text-4xl md:text-5xl font-semibold text-text-primary mb-4 md:mb-6 tracking-tight">
                   {selectedPlayer.name}
                 </h3>
-                <p className="text-text-secondary text-base italic border-l-z2 border-border-active pl-4 mb-8">
+                <p className="text-text-secondary text-base italic border-l-z2 border-border-active md:pl-4 mb-4 md:mb-8">
                   &quot;{selectedPlayer.quote}&quot;
                 </p>
 
                 {/* Additional Info Section */}
-                <div className="grid grid-cols-2 gap-y-4 gap-x-8 mb-8 border-y border-border-default py-6">
+                <div className="grid grid-cols-2 gap-y-4 gap-x-8 mb-4 md:mb-8 border-y border-border-default py-6">
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-text-muted text-xl">calendar_month</span>
                     <div>
@@ -354,18 +354,18 @@ export function SquadSection() {
                 
                 <div className="grid grid-cols-3 gap-4 mt-auto">
                   <div>
-                    <span className="text-text-secondary text-[10px] sm:text-xs uppercase tracking-widest block mb-1">{t("squad.stats.app")}</span>
-                    <span className="text-text-primary text-2xl font-bold">124</span>
+                    <span className="text-text-secondary text-[8px] md:text-[10px] sm:text-xs uppercase tracking-widest block mb-1">{t("squad.stats.app")}</span>
+                    <span className="text-text-primary text-xl md:text-2xl font-bold">124</span>
                   </div>
                   <div>
-                    <span className="text-text-secondary text-[10px] sm:text-xs uppercase tracking-widest block mb-1">{t("squad.stats.goals")}</span>
-                    <span className="text-text-primary text-2xl font-bold">
+                    <span className="text-text-secondary text-[8px] md:text-[10px] sm:text-xs uppercase tracking-widest block mb-1">{t("squad.stats.goals")}</span>
+                    <span className="text-text-primary text-xl md:text-2xl font-bold">
                       {selectedPlayer.role === 'Goalkeeper' || selectedPlayer.role === 'Defender' ? '12' : '48'}
                     </span>
                   </div>
                   <div>
-                    <span className="text-text-secondary text-[10px] sm:text-xs uppercase tracking-widest block mb-1">{t("squad.stats.assists")}</span>
-                    <span className="text-text-primary text-2xl font-bold">
+                    <span className="text-text-secondary text-[8px] md:text-[10px] sm:text-xs uppercase tracking-widest block mb-1">{t("squad.stats.assists")}</span>
+                    <span className="text-text-primary text-xl md:text-2xl font-bold">
                       {selectedPlayer.role === 'Goalkeeper' ? '2' : '31'}
                     </span>
                   </div>
